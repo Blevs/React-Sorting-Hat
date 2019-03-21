@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from "./scenes/Home/";
-import Questions from "./scenes/Questions/";
+import Quiz from "./scenes/Quiz/";
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
         <Router>
           <div className="App">
             <Route exact path="/" component={Home}/>
-            <Route path="/questions" component={Questions}/>
+            <Route path="/quiz" component={Quiz}/>
           </div>
         </Router>
     );

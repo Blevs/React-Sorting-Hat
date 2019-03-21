@@ -5,7 +5,7 @@ const Home = (props) => {
     return (
         <div>
           Home
-          <Link to="/questions">Questions</Link>
+          <Link to="/quiz">Quiz</Link>
         </div>
     );
 };
