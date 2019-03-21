@@ -41,6 +41,10 @@ const questions = [
             }
         ]
     },
-];
+].map(q => {
+    // Add noise to answer points
+    q.answers.forEach((a, idx) => Object.keys(a.points).forEach(key => q.answers[idx].points[key] += (Math.random() - 0.5) / 100));
+    return q;
+});
 
 export default questions;
