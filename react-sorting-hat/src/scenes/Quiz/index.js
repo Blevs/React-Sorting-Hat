@@ -10,13 +10,18 @@ const Quiz = (props) => {
                     [questionIdx]: { "answerIdx": answerIdx, "points": points }
                    });
     };
-    useEffect(() => {
-        console.log(choices);
-    });
     return (
         <div>
           <h1> Questions </h1>
           <Questions questions={questions} choices={choices} chooseAnswer={chooseAnswer} />
+          <Link to={{
+              pathname: "/results",
+              state: {
+                  "choices": choices
+              }
+          }}>
+            "See Results"
+          </Link>
         </div>
     );
 };
