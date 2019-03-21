@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import House from "./components/House";
 
 const mergeWith = (fn, ...objs) => {
     let acc = {};
@@ -22,10 +23,13 @@ const Results = (props) => {
                                       .map(c => c.points)))
           .sort(([_, a], [__, b]) => a <= b);
     return (
-        <div>
+        <div className="results">
           {houses
-           ? houses[0][0] + (houses.length >= 2 && Math.abs(houses[0][1] / houses[1][1] - 1) <= 0.05 ? `, but almost a ${houses[1][0]}.` : "!")
-           : <div> First years should note that the forest on the grounds is forbidden to all pupils. Procede to the Great Hall to be sorted into your house.
+           ? <House house={houses[0][0]}
+                    closeCall={houses.length >= 2 && Math.abs(houses[0][1] / houses[1][1] - 1) <= 0.05
+                               ? houses[1][0]
+                               : false} />
+           : <div className="no-house"> First years should note that the forest on the grounds is forbidden to all pupils. Procede to the Great Hall to be sorted into your house.
                <Link to="/quiz">Take the Quiz!</Link>
              </div>}
         </div>

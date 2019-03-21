@@ -4,7 +4,7 @@ const questions = [
         answers: [
             {
                 text: "Bravely",
-                points: {gryfindor: 1}
+                points: {gryffindor: 1}
             },
             {
                 text: "Evilly",
@@ -25,7 +25,7 @@ const questions = [
         answers: [
             {
                 text: "Keeper",
-                points: {gryfindor: 1}
+                points: {gryffindor: 1}
             },
             {
                 text: "Beater",
