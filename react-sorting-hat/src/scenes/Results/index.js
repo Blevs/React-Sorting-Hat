@@ -20,8 +20,8 @@ const Results = (props) => {
            && Object.getOwnPropertyNames(props.location.state.choices).length > 0
            ? maxKey(mergeWith((a, b) => a+b,
                               ...Object.values(props.location.state.choices).map(c => c.points)))
-           : <div> "Oops. You haven't been sorted yet."
-               <Link to="/quiz">"Take the Quiz!"</Link>
+           : <div> Oops. You haven't been sorted yet.
+               <Link to="/quiz">Take the Quiz!</Link>
              </div>}
         </div>
     );

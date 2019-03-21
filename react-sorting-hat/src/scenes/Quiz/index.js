@@ -14,14 +14,21 @@ const Quiz = (props) => {
         <div>
           <h1> Questions </h1>
           <Questions questions={questions} choices={choices} chooseAnswer={chooseAnswer} />
-          <Link to={{
-              pathname: "/results",
-              state: {
-                  "choices": choices
-              }
-          }}>
-            "See Results"
-          </Link>
+          <div >
+            <Link
+              onClick={event => {
+                  return Object.getOwnPropertyNames(choices).length !== questions.length
+                      ? event.preventDefault() : null;
+              }}
+              to={{
+                pathname: "/results",
+                state: {
+                    "choices": choices
+                }
+            }}>
+              See Results
+            </Link>
+          </div>
         </div>
     );
 };
