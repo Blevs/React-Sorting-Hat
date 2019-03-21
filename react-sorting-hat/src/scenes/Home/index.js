@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./styles/Home.scss";
 
 const Home = (props) => {
     return (
@@ -16,9 +17,8 @@ const Home = (props) => {
             <p>
               Due to resurfaced tweets, the Sorting Hat has been let go. House selection will now be done via a Highly-Advanced Machine Learning Algorithm, which is from the Magical School of Linear Algebra.
             </p>
-            <Link to="/quiz" />
           </div>
-          <Link to="/quiz">Quiz</Link>
+          <NavLink to="/quiz">Quiz</NavLink>
         </div>
     );
 };
