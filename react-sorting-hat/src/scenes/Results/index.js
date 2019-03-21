@@ -16,7 +16,8 @@ const maxKey = (obj) => Object.keys(obj).reduce((a, b) => obj[a] >= obj[b] ? a :
 const Results = (props) => {
     return (
         <div>
-          {props.location.state.choices
+          {props.location.state
+           && props.location.state.choices
            && Object.getOwnPropertyNames(props.location.state.choices).length > 0
            ? maxKey(mergeWith((a, b) => a+b,
                               ...Object.values(props.location.state.choices).map(c => c.points)))
