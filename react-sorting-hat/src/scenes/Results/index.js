@@ -21,7 +21,7 @@ const Results = (props) => {
            && Object.getOwnPropertyNames(props.location.state.choices).length > 0
            ? maxKey(mergeWith((a, b) => a+b,
                               ...Object.values(props.location.state.choices).map(c => c.points)))
-           : <div> Oops. You haven't been sorted yet.
+           : <div> First years should note that the forest on the grounds is forbidden to all pupils. Procede to the Great Hall to be sorted into your house.
                <Link to="/quiz">Take the Quiz!</Link>
              </div>}
         </div>
